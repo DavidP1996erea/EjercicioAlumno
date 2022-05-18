@@ -17,8 +17,8 @@ public class Alumnos {
     private static List<Alumnos> listaAlumnos = new ArrayList<>();
 
     public Alumnos(int matricula, String nombre, String cadena, int[] notas) {
-        this.matricula = matricula;
-        this.nombre = nombre;
+        this.matricula=matricula;
+        this.nombre=nombre;
         this.cadena = cadena;
         this.notas = notas;
         this.notaMedia = notaMediaAlumno(notas) ;
@@ -38,12 +38,12 @@ public class Alumnos {
 
     public static void generarAlumnos(){
 
-        listaAlumnos.add(new Alumnos(1111, "David", "Perea", new int[]{4,5,9,7}));
-        listaAlumnos.add(new Alumnos(1112, "Angel", "Navarro", new int[]{8,4,2,7}));
-        listaAlumnos.add(new Alumnos(1113, "Rubén", "Lindes", new int[]{7,8,10,6}));
-        listaAlumnos.add(new Alumnos(1114, "Javier", "Sequera", new int[]{4,7,4,1}));
-        listaAlumnos.add(new Alumnos(1115, "Alejandro", "Mulero", new int[]{10,6,9,9}));
-        listaAlumnos.add(new Alumnos(1116, "Alejandro", "Sosa", new int[]{7,5,9,9}));
+        listaAlumnos.add(new Alumnos(111123, "David", "Perea", new int[]{4,5,9,7}));
+        listaAlumnos.add(new Alumnos(11134, "Angel", "Navarro", new int[]{8,4,2,7}));
+        listaAlumnos.add(new Alumnos(11163463, "Rubén", "Lindes", new int[]{7,8,10,6}));
+        listaAlumnos.add(new Alumnos(1113464, "Javier", "Sequera", new int[]{4,7,4,1}));
+        listaAlumnos.add(new Alumnos(113415, "Alejandro", "Mulero", new int[]{10,6,9,9}));
+        listaAlumnos.add(new Alumnos(1112416, "final", "Sosa", new int[]{7,5,9,9}));
 
     }
 
@@ -69,10 +69,16 @@ public class Alumnos {
     }
 
     public String getNombre() {
-        return nombre;
+
+        StringBuffer sb = new StringBuffer();
+        sb.append(nombre);
+        sb.setLength(20);
+
+        return sb.toString();
     }
 
     public void setNombre(String nombre) {
+
         this.nombre = nombre;
     }
 
